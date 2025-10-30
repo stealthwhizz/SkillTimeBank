@@ -1,0 +1,47 @@
+{
+  "name": "skilltimebank",
+  "version": "0.0.0",
+  "description": "A community timebank app for Reddit",
+  "main": "src/main.tsx",
+  "scripts": {
+    "build": "devvit upload",
+    "typecheck": "tsc --noEmit",
+    "dev:run": "devvit playtest r/SkillTimeBank",
+    "dev:upload": "devvit upload",
+    "test": "vitest",
+    "admin:award-credit": "npx tsx src/scripts/award-credit.ts",
+    "admin:reset-economy": "npx tsx src/scripts/reset-economy.ts",
+    "admin:ban-user": "npx tsx src/scripts/ban-user.ts",
+    "kiro:generate-services": "npx tsx .kiro/hooks/generate-services.kiro.ts",
+    "kiro:generate-types": "echo 'Type generation from specs - placeholder'",
+    "kiro:sync-tests": "echo 'Test scaffold generation - placeholder'",
+    "kiro:regen-admin-docs": "echo 'Admin docs regeneration - placeholder'",
+    "demo:create-post": "npx tsx scripts/create-demo-post.ts",
+    "submit:assets": "npx tsx scripts/submit-assets.ts"
+  },
+  "keywords": [
+    "devvit",
+    "reddit",
+    "timebank"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@devvit/kit": "^1.1.4",
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "jsdom": "^27.0.1",
+    "tsx": "^4.0.0",
+    "typescript": "5.8.3",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@devvit/public-api": "0.12.1",
+    "@tailwindcss/forms": "^0.5.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "type": "module",
+  "private": true
+}

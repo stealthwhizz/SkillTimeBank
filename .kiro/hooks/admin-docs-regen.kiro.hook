@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Admin Toolkit Docs",
+  "description": "Regenerate moderator CLI docs on script changes",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/scripts/**/*.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Read CLI scripts and regenerate docs/ADMIN_TOOLKIT.md with: command reference (award-credit, reset-economy, ban-user), flags, examples, required permissions, safety warnings (dry-run, confirm prompts, limits), and troubleshooting. Include real examples using placeholder usernames."
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTimeBank</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0B1416;
+            color: #D7DADC;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #FF4500;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: #1A282D;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        button {
+            background: #FF4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #FF5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕐 SkillTimeBank</h1>
+        <div class="card">
+            <h2>Welcome to the Community Timebank</h2>
+            <p>Exchange time and skills with your community members.</p>
+            <button onclick="loadApp()">Get Started</button>
+        </div>
+        <div id="app"></div>
+    </div>
+    
+    <script>
+        // Access Devvit context
+        const devvitContext = window.devvit;
+        
+        function loadApp() {
+            const appDiv = document.getElementById('app');
+            appDiv.innerHTML = `
+                <div class="card">
+                    <h3>Browse Gigs</h3>
+                    <p>Coming soon: Browse available skills and services from community members.</p>
+                </div>
+                <div class="card">
+                    <h3>Post a Gig</h3>
+                    <p>Coming soon: Offer your skills or request services from others.</p>
+                </div>
+            `;
+        }
+        
+        // Initialize the app when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('SkillTimeBank web view loaded');
+            if (devvitContext) {
+                console.log('Devvit context available', devvitContext);
+            }
+        });
+    </script>
+</body>
+</html>

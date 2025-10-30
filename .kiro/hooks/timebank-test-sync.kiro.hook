@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "name": "TimeBank Test Sync",
+  "description": "Generate/update tests when gig/economy logic changes",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/types/**/*.ts",
+      "src/state/**/*.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the changed files. If gig creation, acceptance, confirmation, payment, or state manager logic changed, then: 1) create or update tests under tests/ to cover insufficient balance, self-accept prevention, double-accept race, conflicting confirmations, idempotent payment (no double-pay), cancel-after-accept, and transaction audit trail; 2) add an integration test for the full lifecycle (OPEN→IN_PROGRESS→AWAITING_CONFIRMATION→COMPLETED) including transaction creation; 3) ensure tests run with npm test and include snapshots of state before/after."
+  }
+}
