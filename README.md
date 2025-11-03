@@ -113,7 +113,7 @@ Note on “Kiro” docs: this repo includes write‑ups and placeholder scripts 
 
 ## 📜 License
 
-BSD-3-Clause
+MIT LICENSE
 
 ## 🤝 Contributing
 
